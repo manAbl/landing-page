@@ -1,0 +1,66 @@
+.header-wrapper .navbar-item {
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-wrapper .navbar-item:hover {
+  color: #5ba515;
+}
+
+.header-wrapper .logo .img-fluid {
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-wrapper .navbar-start .navbar-item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header-wrapper .logo {
+    width: 110px;
+    margin: -13px 0 0;
+    display: block;
+  }
+
+  .header-wrapper .navbar-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .header-wrapper {
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-top: 25px;
+  }
+
+  .header-wrapper .navbar-start {
+    line-height: 1.14;
+    border-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .header-wrapper .logo {
+    width: 165px;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .header-wrapper .navbar-start .navbar-item {
+    margin: 0 0 0 31px;
+  }
+
+  .header-wrapper .navbar-item {
+    margin: 0 12px;
+  }
+}
