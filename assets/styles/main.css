@@ -32,6 +32,7 @@ img {
   color: inherit;
 }
 
+.has-transition--regular,
 .hover-green-bg,
 .hover-green,
 .text-white-hover {

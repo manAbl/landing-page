@@ -1,0 +1,27 @@
+.products--inner-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+.products--inner-wrapper .card-wrapper {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .products--inner-wrapper .card-wrapper {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .container {
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-top: 25px;
+  }
+
+  .products--inner-wrapper .card-wrapper {
+    width: 20%;
+  }
+}
