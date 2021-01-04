@@ -1,7 +1,7 @@
 .header-wrapper .navbar-item {
   color: #333;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: var(--regular-transition);
 }
 
 .header-wrapper .navbar-item:hover {

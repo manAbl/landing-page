@@ -1,3 +1,7 @@
+:root {
+  --regular-transition: all 0.3s ease;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
@@ -6,7 +10,7 @@ body {
   line-height: 16px;
   text-align: left;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.9375rem;
 }
 
 h1 {
@@ -23,8 +27,31 @@ img {
   border-style: none;
 }
 
+.color-inherit {
+  color: inherit;
+}
+
+.hover-green-bg,
+.hover-green,
+.text-white-hover {
+  transition: var(--regular-transition);
+}
+
+.text-green {
+  color: #5ba515 !important;
+}
+
 .hover-green:hover {
   color: #5ba515 !important;
+}
+
+.hover-green-bg:hover {
+  background-color: #5ba515 !important;
+  border-color: #5ba515 !important;
+}
+
+.text-white-hover:hover {
+  color: white !important;
 }
 
 .icon--small {
