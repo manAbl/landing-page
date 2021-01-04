@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer has-background-white">
     <div class="content">
       <div
         v-for="(list, i) in sectionsLists"
@@ -29,9 +29,9 @@
             </template>
           </li>
           <template v-if="i == 0">
-            <div class="is-inline-block social-media">
+            <div class="is-inline-block social-media is-flex">
               <strong class="mr-5"> Follow us: </strong>
-              <div class="is-inline-block ml-5">
+              <div class="is-inline-block">
                 <fa-icon
                   v-for="icon in socialIcons"
                   :key="icon[1]"
@@ -70,7 +70,7 @@ export default {
             {
               label: 'Address: London Oxford Street, 012 United Kingdom.',
               icon: ['fas', 'map-marker-alt'],
-              classes: 'has-text-weight-bold',
+              classes: 'has-text-weight-bold color-charcoal',
             },
             {
               html: true,
@@ -161,7 +161,7 @@ export default {
     },
     socialIcons() {
       return [
-        ['fab', 'instagram'],
+        ['fab', 'facebook-f'],
         ['fab', 'twitter'],
         ['fab', 'pinterest'],
         ['fab', 'google-plus-g'],

@@ -7,11 +7,12 @@ import {
   faPhoneAlt,
   faShoppingCart,
   faMapMarkerAlt,
+  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons'
 import { faHeart, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
-  faInstagram,
+  faFacebookF,
   faTwitter,
   faPinterest,
   faGooglePlusG,
@@ -28,9 +29,10 @@ library.add(
   faEnvelope,
   faPhoneAlt,
   faMapMarkerAlt,
-  faInstagram,
+  faFacebookF,
   faTwitter,
   faPinterest,
-  faGooglePlusG
+  faGooglePlusG,
+  faArrowRight
 )
 Vue.component('fa-icon', FontAwesomeIcon)
