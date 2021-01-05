@@ -112,6 +112,7 @@ h6,
   color: #333;
 }
 
+.carousel-slide,
 .container.is-fluid {
   padding-left: 15px;
   padding-right: 15px;
