@@ -28,6 +28,10 @@ img {
   border-style: none;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;

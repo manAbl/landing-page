@@ -1,8 +1,8 @@
 <template>
-  <main class="container is-fluid mb-5 pt-5">
+  <main class="container is-fluid mb-5 pt-5 pb-5">
     <section class="section choose-us mb-5">
       <div class="container is-flex">
-        <div class="image-wrapper">
+        <div class="image-wrapper mb-5">
           <img src="/img01.jpg" class="img-fluid" />
         </div>
         <div class="description-wrapper">
@@ -35,6 +35,7 @@
       </div>
     </section>
 
+    <!---- Featured products section START ---->
     <i-section-condensed
       title="featured products"
       classes="featured-products"
@@ -42,9 +43,30 @@
     >
       <i-card-list :products="featuredProducts" />
     </i-section-condensed>
+    <!---- Featured products section END ---->
 
     <i-tag-tiles :items="tags" />
 
+    <section class="section mb-5 mt-5 ads-wrapper">
+      <div class="container">
+        <div
+          class="is-flex is-flex-wrap-wrap pb-5 mb-5 mt-5 pb-5 ads--inner-wrapper"
+        >
+          <div class="image-wrapper">
+            <a href="/">
+              <img src="/ad1.jpg" />
+            </a>
+          </div>
+          <div class="image-wrapper">
+            <a href="/">
+              <img src="/ad2.jpg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---- Daily deals section START ---->
     <i-section-condensed
       classes="deals-wrapper"
       title="daily deals"
@@ -66,19 +88,51 @@
           >
         </span>
       </div>
-      <i-cards-carousel
+      <i-carousel
         :carousel-items="deals"
         :config="{ repeat: true, itemToShow: 5 }"
-      />
+        ><template slot="item" slot-scope="{ item }">
+          <i-product-card
+            :image-src="item.image"
+            :is-hot="item.hot"
+            :is-sale="item.sale"
+            :title="item.name"
+            :price="item.price"
+            href="/"
+          />
+        </template>
+      </i-carousel>
     </i-section-condensed>
+    <!---- Daily deals section END ---->
+
+    <!---- Logos section START ---->
+    <section class="section mb-5 pt-5">
+      <div class="container">
+        <i-carousel
+          :carousel-items="logos"
+          :config="{ repeat: true, itemToShow: 5 }"
+          ><template slot="item" slot-scope="{ item }">
+            <div
+              class="is-flex is-justify-content-center is-align-items-center"
+            >
+              <a href="/">
+                <img :src="item.imageSrc" class="img-fluid" />
+              </a>
+            </div>
+          </template>
+        </i-carousel>
+      </div>
+    </section>
+    <!---- Logos section END ---->
   </main>
 </template>
 
 <script>
 import ISectionCondensed from '~/components/SectionCondensed'
-import ICardsCarousel from '~/components/CardsCarousel'
 import ICardList from '~/components/CardList'
 import ITagTiles from '~/components/TagTiles'
+import ICarousel from '~/components/Carousel'
+import IProductCard from '~/components/ProductCard'
 
 export default {
   layout: 'basic',
@@ -86,7 +140,8 @@ export default {
   components: {
     ITagTiles,
     ICardList,
-    ICardsCarousel,
+    ICarousel,
+    IProductCard,
     ISectionCondensed,
   },
   computed: {
@@ -215,6 +270,31 @@ export default {
           subtitle:
             'There are many variations of passages of lorem ipsum available, but the majority have suffered.',
         },
+      ]
+    },
+    logos() {
+      return [
+        { imageSrc: '/p-logo1.png' },
+        { imageSrc: '/p-logo2.png' },
+        { imageSrc: '/p-logo4.png' },
+        { imageSrc: '/p-logo5.png' },
+        { imageSrc: '/p-logo6.png' },
+        { imageSrc: '/p-logo2.png' },
+        { imageSrc: '/p-logo4.png' },
+        { imageSrc: '/p-logo5.png' },
+        { imageSrc: '/p-logo6.png' },
+        { imageSrc: '/p-logo2.png' },
+        { imageSrc: '/p-logo4.png' },
+        { imageSrc: '/p-logo5.png' },
+        { imageSrc: '/p-logo6.png' },
+        { imageSrc: '/p-logo2.png' },
+        { imageSrc: '/p-logo4.png' },
+        { imageSrc: '/p-logo5.png' },
+        { imageSrc: '/p-logo6.png' },
+        { imageSrc: '/p-logo2.png' },
+        { imageSrc: '/p-logo4.png' },
+        { imageSrc: '/p-logo5.png' },
+        { imageSrc: '/p-logo6.png' },
       ]
     },
   },

@@ -55,8 +55,8 @@
   .container .tile.is-child {
     padding-left: 32px;
     padding-right: 32px;
-    padding-bottom: 32px;
-    padding-top: 28px;
+    padding-bottom: 20px;
+    padding-top: 25px;
     width: 274px;
   }
 }

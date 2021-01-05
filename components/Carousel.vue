@@ -9,21 +9,12 @@
     "
   >
     <template slot="item" slot-scope="item">
-      <i-product-card
-        :image-src="item.image"
-        :is-hot="item.hot"
-        :is-sale="item.sale"
-        :title="item.name"
-        :price="item.price"
-        href="/"
-      />
+      <slot :item="item" name="item" />
     </template>
   </b-carousel-list>
 </template>
 
 <script>
-import IProductCard from '~/components/ProductCard'
-
 const defaultConfig = {
   arrow: false,
   repeat: false,
@@ -31,10 +22,7 @@ const defaultConfig = {
 }
 
 export default {
-  name: 'ICardsCarousel',
-  components: {
-    IProductCard,
-  },
+  name: 'ICarousel',
   props: {
     carouselItems: {
       type: Array,
@@ -55,7 +43,3 @@ export default {
   },
 }
 </script>
-
-<style>
-@import '~/assets/styles/components/card-list.css';
-</style>
