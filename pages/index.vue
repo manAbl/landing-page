@@ -8,6 +8,8 @@
       <i-card-list :products="featuredProducts" />
     </i-section-condensed>
 
+    <i-tag-tiles :items="tags" />
+
     <i-section-condensed
       classes="deals-wrapper"
       title="daily deals"
@@ -39,11 +41,13 @@
 import ISectionCondensed from '~/components/SectionCondensed'
 import ICardsCarousel from '~/components/CardsCarousel'
 import ICardList from '~/components/CardList'
+import ITagTiles from '~/components/TagTiles'
 
 export default {
   layout: 'basic',
   name: 'HomePage',
   components: {
+    ITagTiles,
     ICardList,
     ICardsCarousel,
     ISectionCondensed,
@@ -128,6 +132,30 @@ export default {
         ...this.featuredProducts,
         ...this.featuredProducts,
         ...this.featuredProducts,
+      ]
+    },
+    tags() {
+      return [
+        {
+          icon: ['fas', 'truck-moving'],
+          title: 'Free shipping order',
+          subtitle: 'On order over $100',
+        },
+        {
+          icon: ['fas', 'gift'],
+          title: 'Special gift card',
+          subtitle: 'The perfect gift idea',
+        },
+        {
+          icon: ['fas', 'sync'],
+          title: 'Return & exchange',
+          subtitle: 'Free return within 3 days',
+        },
+        {
+          icon: ['fas', 'phone-alt'],
+          title: 'Support 24 / 7',
+          subtitle: 'Customer support',
+        },
       ]
     },
   },

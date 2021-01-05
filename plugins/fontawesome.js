@@ -9,6 +9,9 @@ import {
   faMapMarkerAlt,
   faArrowRight,
   faExchangeAlt,
+  faTruckMoving,
+  faGift,
+  faSync,
 } from '@fortawesome/free-solid-svg-icons'
 import { faHeart, faEnvelope, faEye } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -36,6 +39,9 @@ library.add(
   faGooglePlusG,
   faArrowRight,
   faExchangeAlt,
-  faEye
+  faEye,
+  faTruckMoving,
+  faGift,
+  faSync
 )
 Vue.component('fa-icon', FontAwesomeIcon)
