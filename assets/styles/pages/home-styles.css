@@ -6,11 +6,48 @@
   margin-bottom: 20px;
 }
 
+.countdown-row {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-section {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 25px;
+}
+
+.countdown-amount {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 27px;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.countdown-period {
+  margin-top: 5px;
+  color: #b2b2b2;
+  text-align: center;
+}
+
+.countdown-section:nth-child(1) .countdown-amount::after,
+.countdown-section:nth-child(2) .countdown-amount::after {
+  content: ":";
+  float: right;
+  transform: translateX(2rem);
+}
+
 @media screen and (min-width: 480px) {
   .card-wrapper {
     width: 50%;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .countdown-amount {
+    font-size: 31px;
+    line-height: 33px;
   }
 }
 

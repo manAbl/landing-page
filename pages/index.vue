@@ -15,19 +15,21 @@
       title="daily deals"
       subtitle="There are many variations of passages of lorem ipsum available."
     >
-      <div slot="header-end" class="comming-timer is-countdown">
-        <span class="countdown-row countdown-show3"
-          ><span class="countdown-section"
-            ><span class="countdown-amount text-green">0</span
-            ><span class="countdown-period">Hours</span></span
-          ><span class="countdown-section"
-            ><span class="countdown-amount text-green">0</span
-            ><span class="countdown-period">Minutes</span></span
-          ><span class="countdown-section"
-            ><span class="countdown-amount text-green">0</span
-            ><span class="countdown-period">Seconds</span></span
-          ></span
-        >
+      <div slot="header-end" class="comming-timer is-countdown mt-4">
+        <span class="countdown-row countdown-show3">
+          <span class="countdown-section">
+            <span class="countdown-amount text-green">0</span>
+            <span class="countdown-period">Hours</span></span
+          >
+          <span class="countdown-section">
+            <span class="countdown-amount text-green">0</span>
+            <span class="countdown-period">Minutes</span></span
+          >
+          <span class="countdown-section">
+            <span class="countdown-amount text-green">0</span>
+            <span class="countdown-period">Seconds</span></span
+          >
+        </span>
       </div>
       <i-cards-carousel
         :carousel-items="deals"
