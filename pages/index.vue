@@ -1,5 +1,40 @@
 <template>
   <main class="container is-fluid mb-5 pt-5">
+    <section class="section choose-us mb-5">
+      <div class="container is-flex">
+        <div class="image-wrapper">
+          <img src="/img01.jpg" class="img-fluid" />
+        </div>
+        <div class="description-wrapper">
+          <h1 class="heading-II is-relative">Why choose us ?</h1>
+          <p class="heading-subtitle">
+            Lorem ipsum is simply dummy text of the printing and typesetting
+            industry, lorem ipsum has been the industry's standard dummy text
+            ever since the 1500s when an unknown printer took a galley ...
+            <a href="/" class="text-green is-italic">Learn More</a>
+          </p>
+
+          <ul class="reasons-wrapper">
+            <li
+              v-for="(r, i) in chooseReasons"
+              :key="i"
+              class="is-flex is-align-items-center pb-5 pt-2"
+            >
+              <fa-icon :icon="r.icon" class="icon--md text-green mr-5" />
+              <div>
+                <h3 class="heading-III">
+                  {{ r.title }}
+                </h3>
+                <p>
+                  {{ r.subtitle }}
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <i-section-condensed
       title="featured products"
       classes="featured-products"
@@ -157,6 +192,28 @@ export default {
           icon: ['fas', 'phone-alt'],
           title: 'Support 24 / 7',
           subtitle: 'Customer support',
+        },
+      ]
+    },
+    chooseReasons() {
+      return [
+        {
+          icon: ['fas', 'seedling'],
+          title: 'Hand planted',
+          subtitle:
+            'There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form.',
+        },
+        {
+          icon: ['fas', 'leaf'],
+          title: 'Natural Sunlight',
+          subtitle:
+            'It is a long established fact that a reader will be distracted by the reable content of a page.',
+        },
+        {
+          icon: ['fas', 'spa'],
+          title: 'Clean Air',
+          subtitle:
+            'There are many variations of passages of lorem ipsum available, but the majority have suffered.',
         },
       ]
     },

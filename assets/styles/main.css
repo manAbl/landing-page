@@ -8,7 +8,7 @@ body {
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   color: #707070;
-  line-height: 16px;
+  line-height: 1.6;
   text-align: left;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -26,6 +26,11 @@ h1 .bold {
 img {
   vertical-align: middle;
   border-style: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 .color-inherit {
@@ -111,6 +116,18 @@ h6,
   box-shadow: none;
 }
 
+.heading-II {
+  font-size: 25px;
+  line-height: 27px;
+  color: #333;
+}
+
+.heading-III {
+  font-size: 20px;
+  line-height: 22px;
+  color: #444;
+}
+
 .heading-IV {
   font-size: 25px;
   line-height: 27px;
@@ -144,10 +161,15 @@ h6,
 }
 
 @media screen and (min-width: 768px) {
+  .heading-II {
+    font-size: 36px;
+  }
+
   .heading-IV {
     font-size: 36px;
     line-height: 29px;
   }
+
   .input-field {
     width: 424px;
   }
