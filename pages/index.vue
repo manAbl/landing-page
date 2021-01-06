@@ -77,7 +77,7 @@
 
       <!---- Daily deals section START ---->
       <i-section-condensed
-        classes="deals-wrapper"
+        classes="deals-wrapper mb-5 pb-5"
         title="daily deals"
         subtitle="There are many variations of passages of lorem ipsum available."
       >
@@ -97,30 +97,27 @@
             >
           </span>
         </div>
-        <i-carousel
-          :carousel-items="deals"
-          :config="{ repeat: true, itemToShow: 5 }"
-          ><template slot="item" slot-scope="{ item }">
-            <i-product-card
-              :image-src="item.image"
-              :is-hot="item.hot"
-              :is-sale="item.sale"
-              :title="item.name"
-              :price="item.price"
-              href="/"
-            />
-          </template>
+        <i-carousel :config="dealsCarouselConfig">
+          <i-product-card
+            v-for="(item, i) in deals"
+            slot="item"
+            :key="i"
+            :image-src="item.image"
+            :is-hot="item.hot"
+            :is-sale="item.sale"
+            :title="item.name"
+            :price="item.price"
+            href="/"
+          />
         </i-carousel>
       </i-section-condensed>
       <!---- Daily deals section END ---->
-
+      <div class="mb-5 pb-5" />
       <!---- Logos section START ---->
       <section class="section mb-5 pt-5">
         <div class="container">
-          <i-carousel
-            :carousel-items="logos"
-            :config="{ repeat: true, itemToShow: 5 }"
-            ><template slot="item" slot-scope="{ item }">
+          <i-carousel :config="logosCarouselConfig">
+            <div v-for="(item, i) in logos" slot="item" :key="i">
               <div
                 class="is-flex is-justify-content-center is-align-items-center"
               >
@@ -128,7 +125,9 @@
                   <img :src="item.imageSrc" class="img-fluid" />
                 </a>
               </div>
-            </template>
+            </div>
+            <!-- <template slot="item" slot-scope="{ item }"> -->
+            <!-- </template> -->
           </i-carousel>
         </div>
       </section>
@@ -308,6 +307,107 @@ export default {
         { imageSrc: '/p-logo5.png' },
         { imageSrc: '/p-logo6.png' },
       ]
+    },
+    logosCarouselConfig() {
+      return {
+        dots: false,
+        arrows: false,
+        focusOnSelect: true,
+        autoplay: true,
+        infinite: true,
+        speed: 500,
+        autoplaySpeed: 2000,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        touchThreshold: 5,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 1,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+            },
+          },
+        ],
+      }
+    },
+    dealsCarouselConfig() {
+      return {
+        dots: true,
+        arrows: false,
+        focusOnSelect: true,
+        autoplay: true,
+        infinite: true,
+        speed: 500,
+        autoplaySpeed: 3500,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        touchThreshold: 5,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              initialSlide: 2,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              initialSlide: 2,
+              dots: true,
+              infinite: true,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true,
+              infinite: true,
+            },
+          },
+        ],
+      }
     },
   },
 }
