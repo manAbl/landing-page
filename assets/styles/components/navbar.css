@@ -16,7 +16,7 @@
 }
 
 .header-wrapper .navbar-item:hover {
-  color: #5ba515;
+  color: var(--primary);
 }
 
 .header-wrapper .logo {
@@ -27,6 +27,23 @@
   max-width: 100%;
   height: auto;
   max-height: none;
+}
+
+.icon--small.cart::before,
+.icon--small.liked::before {
+  content: attr(data-number);
+  position: absolute;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -11px;
+  top: -2px;
+  font-size: 11px;
+  background: var(--primary);
 }
 
 .mobile-menu {

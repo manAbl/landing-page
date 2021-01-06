@@ -46,12 +46,12 @@
             </span>
           </div>
           <div class="navbar-item is-flex mr-1">
-            <span class="icon--small">
+            <span class="icon--small is-relative liked" data-number="2">
               <fa-icon :icon="['far', 'heart']" />
             </span>
           </div>
           <div class="navbar-item is-flex ml-1">
-            <span class="icon--small">
+            <span class="icon--small is-relative cart" data-number="2">
               <fa-icon :icon="['fas', 'shopping-cart']" />
             </span>
           </div>
@@ -82,12 +82,12 @@
               </span>
             </div>
             <div class="navbar-item is-flex mr-1">
-              <span class="icon--small">
+              <span class="icon--small is-relative liked" data-number="2">
                 <fa-icon :icon="['far', 'heart']" />
               </span>
             </div>
             <div class="navbar-item is-flex ml-1">
-              <span class="icon--small">
+              <span class="icon--small is-relative cart" data-number="2">
                 <fa-icon :icon="['fas', 'shopping-cart']" />
               </span>
             </div>

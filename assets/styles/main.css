@@ -1,6 +1,7 @@
 :root {
   --regular-transition: all 0.3s ease;
   --charcoal: #444444;
+  --primary: #5ba515;
 }
 
 body {
@@ -65,17 +66,17 @@ img {
 }
 
 .text-green {
-  color: #5ba515 !important;
+  color: var(--primary) !important;
 }
 
 .hover-green:hover {
-  color: #5ba515 !important;
+  color: var(--primary) !important;
 }
 
 .green-bg,
 .hover-green-bg:hover {
-  background-color: #5ba515 !important;
-  border-color: #5ba515 !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
 }
 
 .text-white,

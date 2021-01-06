@@ -37,7 +37,7 @@
   right: auto;
   bottom: auto;
   left: 0;
-  background: #5ba515;
+  background: var(--primary);
 }
 
 .buy-button {

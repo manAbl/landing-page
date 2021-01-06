@@ -56,7 +56,7 @@ figure.image {
   background: #f9861f;
 }
 .state-tag.sale-offer {
-  background: #5ba515;
+  background: var(--primary);
   left: 20px;
 }
 .state-tag.sale-offer.pulled-left {
