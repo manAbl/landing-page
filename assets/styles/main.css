@@ -41,6 +41,10 @@ img {
   color: inherit;
 }
 
+.border {
+  border: 1px solid #cdcdcd !important;
+}
+
 .has-transition--regular,
 .hover-green-bg,
 .hover-green,
