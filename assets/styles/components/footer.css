@@ -74,18 +74,18 @@
 }
 
 @media screen and (min-width: 720px) {
-  .content .list-wrapper:not(:last-child)  {
-    flex-basis: 22%;
+  .content .list-wrapper:not(:last-child) {
+    flex-basis: 50%;
   }
   .content .list-wrapper:last-child ul {
     display: flex;
     flex-flow: row wrap;
   }
   .content .list-wrapper:first-child {
-    flex-basis: 33%;
+    flex-basis: 50%;
   }
   .content .list-wrapper:last-child {
-    flex-basis: 22%;
+    flex-basis: 50%;
   }
 }
 
@@ -97,6 +97,15 @@
 }
 
 @media screen and (min-width: 1170px) {
+  .content .list-wrapper:not(:last-child) {
+    flex-basis: 22%;
+  }
+  .content .list-wrapper:first-child {
+    flex-basis: 33%;
+  }
+  .content .list-wrapper:last-child {
+    flex-basis: 22%;
+  }
   .footer {
     padding: 60px 100px 40px 100px;
   }
