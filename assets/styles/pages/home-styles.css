@@ -127,7 +127,7 @@
 }
 
 @media screen and (min-width: 1170px) {
-  .container {
+  .container:not(.main) {
     padding-left: 85px;
     padding-right: 85px;
     padding-top: 25px;

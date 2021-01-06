@@ -1,3 +1,14 @@
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  background: transparent;
+}
+
 .header-wrapper .navbar-item {
   color: #333;
   cursor: pointer;

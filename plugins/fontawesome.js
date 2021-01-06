@@ -15,6 +15,8 @@ import {
   faSeedling,
   faLeaf,
   faSpa,
+  faAngleRight,
+  faAngleLeft,
 } from '@fortawesome/free-solid-svg-icons'
 import { faHeart, faEnvelope, faEye } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -48,6 +50,8 @@ library.add(
   faSync,
   faSeedling,
   faLeaf,
-  faSpa
+  faSpa,
+  faAngleRight,
+  faAngleLeft
 )
 Vue.component('fa-icon', FontAwesomeIcon)
